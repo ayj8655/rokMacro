@@ -1,5 +1,5 @@
 import pyautogui
-import time
+import time, random
 
 #   moveTo = 마우스 커서 이동 , moveRel = 기존 마우스 위치에서 지정된만큼 이동
 #   click = 클릭(인자로 위치 넣으면 무브따로 안해도 바로감), doubleClick() = 더블클릭
@@ -21,10 +21,13 @@ while(1):
 
     if handshake is not None:
         pyautogui.moveTo(handshake)
-        pyautogui.moveRel(0,40)
+        x = random.randint(10, 40)
+        pyautogui.moveRel(0,x)
         pyautogui.click()
         print("악수 자동으로 했음")
         time.sleep(1)
+
+        """
     if food is not None:
         pyautogui.moveTo(food)
         pyautogui.moveRel(0,40)
@@ -48,8 +51,9 @@ while(1):
         pyautogui.moveRel(0,40)
         pyautogui.click()
         print("돌 자동으로 했음")
-        time.sleep(1)            
-    time.sleep(2)
+        time.sleep(1)         
+        """   
+    time.sleep(10)
 
 
 
